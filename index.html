@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><!--定义文档视口,防止网页缩放-->
+    <meta name="keywords" content=""><!--网页的关键字信息-->
+    <meta name="description" content=""><!--网页的简介-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--使用IE最新内核-->
+    <title>标题</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd{
+            margin:0;
+            padding:0;
+        }
+        ul,ol{
+            list-style:none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #redheart{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transition: all 1s;
+            margin: 100px;
+            animation: redheart 0.8s forwards infinite alternate;
+        }
+        #redheart:hover{
+            transform: scale(1.5);
+        }
+        .yuan{
+            width: 100px;
+            height: 101px;
+        }
+        .left{
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            position: absolute;
+            top: 20px;
+            left: 26px;
+            transform: rotate(45deg);
+            background-color: red;
+        }
+        .right{
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: absolute;
+            top: 20px;
+            left: 166px;
+            transform: rotate(-45deg);
+            background-color: red;
+        }
+        .bottom{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 91px;
+            left: 96px;
+            transform: rotate(45deg);
+            background-color: red;
+        }
+        @keyframes redheart{
+            0%{
+                transform:scale(1);
+            }
+            100%{
+                transform:scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+   <div id="redheart">
+       <div class="left yuan"></div>
+       <div class="right yuan"></div>
+       <div class="bottom"></div>
+   </div>
+</body>
+</html>
